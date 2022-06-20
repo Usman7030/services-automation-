@@ -1,0 +1,14 @@
+{
+  "name": "services-automate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "apify": "^2.3.2",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
+    "puppeteer": "^14.4.1",
+    "write-yaml-file": "^4.2.0",
+    "yamljs": "^0.3.0"
+  }
+}
