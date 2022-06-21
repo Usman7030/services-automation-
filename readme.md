@@ -2,13 +2,14 @@
 
 ## Required
 
-node -v shoulf be greater than 14.
+node -v should be greater than 14.
 
 ## Installtion 
 - npm install or yarn install 
 
-- create folder . inside create text file for each service .that's it.
+- create folder . inside folder create text file for each service .that's it.
 
-![e.g](./img.jpg)
+![ScreenShot](/img.png)
+
 
 

@@ -1,0 +1,48 @@
+mevris/config/com.mevris.service.schemas
+memcached:
+  uri: "localhost:11211"
+  retries: 3
+
+database:
+  typeorm:
+    type: "postgres"
+    host: "localhost"
+    port: 5432
+    username: "postgres"
+    password: "admin"
+    database: "mevrisdb"
+    # replication:
+    #   master:
+    #     host: "postgres"   #your system ip
+    #     port: 5433
+    #     username: artalat
+    #     password: password
+    #     database: mevrisdb
+    #   slaves:
+    #   - host: "postgres"
+    #     port: 5434
+    #     username: artalat
+    #     password: password
+    #     database: mevrisdb
+
+  eventstore:
+    poolMax:
+    streamProtocol: "http"
+    hostname: "localhost"
+    httpPort: 2113
+    httpPotocol: "http"
+    tcpPassword: "changeit"
+    tcpUsername: "admin"
+    tcpPort: 1113
+    tcpProtocol: tcp
+
+  redis:
+    host: "localhost"
+    port: "6379"
+    password: ""
+
+keycloak:
+  authServerUrl: "https://account.mevris.io/auth"
+  realm: "master"
+  clientId: "admin-cli"
+  secret: "62c345e1-f655-443f-9103-0e107dfbc5d6"
