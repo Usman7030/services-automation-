@@ -1,7 +1,9 @@
 const functions = require("./file_read");
 const yaml = require("js-yaml");
+const puppeteer = require('puppeteer')
 
-main(async () => {
+
+async function main() {
 
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
@@ -21,7 +23,7 @@ main(async () => {
     await page.waitForSelector(".CodeMirror");
     await page.waitForSelector("label.type-text:nth-child(1)");
 
-    await page.type("label.type-text:nth-child(1)", files[i]);
+    await page.type("label.type-text:nth-child(1)", 'mevris/config/'+files[i]);
     await page.type(
       ".CodeMirror > div:nth-child(1) > textarea:nth-child(1)",
       tk
@@ -39,7 +41,8 @@ main(async () => {
 
   await browser.close();
 
-  log.info("Done.");
-});
+ 
+  console.log("Done....!");
+};
 
 main();

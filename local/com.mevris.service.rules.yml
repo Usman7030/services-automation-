@@ -1,0 +1,41 @@
+# mevris/config/com.mevris.service.rules
+memcached:
+  uri: "3.137.156.166:11211"
+  retries: 3
+
+database:
+  typeorm:
+    type: "postgres"
+    host: "3.143.229.168"
+    port: 5432
+    username: "postgres"
+    password: "password"
+    database: "mevrisdb"
+
+  eventstore:
+    poolMax:
+    poolMin:
+    streamProtocol: "http"
+    hostname: "18.118.22.69"
+    httpPort: 2113
+    httpPotocol: "http"
+    tcpPassword: "changeit"
+    tcpUsername: "admin"
+    tcpPort: 1113
+    tcpProtocol: tcp
+
+  redis:
+    host: "3.18.111.202"
+    port: 6379
+    password: ""
+
+keycloak:
+  authServerUrl: "https://account.mevris.io/auth"
+  realm: "master"
+  clientId: "admin-cli"
+  secret: "1aed4361-2a14-49ac-b2d9-7ecf87e39f9b"
+
+agenda:
+  name: "mevris"
+  db:
+    address: mongodb://root:password123@18.225.31.254/mevris-agenda
