@@ -7,7 +7,7 @@ main(async () => {
   const page = await browser.newPage();
   await page.goto("http://127.0.0.1:8500/ui/dc1/kv/create");
 
-  let [abc, files] = await functions.try2();
+  let [abc, files] = await functions.files();
 
   for (var i = 0; i < abc.length; i++) {
     const tk = await yaml.dump(abc[i], {

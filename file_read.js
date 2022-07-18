@@ -16,7 +16,7 @@ module.exports = {
     return output;
   },
 
-  try2: async function () {
+  files: async function () {
     console.log("start..!");
     let dir = path.join(__dirname, "./local");
     let files = await fs.readdirSync(dir); // gives all the files
